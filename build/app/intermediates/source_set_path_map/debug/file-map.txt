@@ -10,3 +10,4 @@ com.example.demo_app-rs-8 C:\xampp\htdocs\mobile-Complete-Flutter-UI\build\app\g
 com.example.demo_app-mergeDebugResources-9 C:\xampp\htdocs\mobile-Complete-Flutter-UI\build\app\intermediates\incremental\debug\mergeDebugResources\merged.dir
 com.example.demo_app-mergeDebugResources-10 C:\xampp\htdocs\mobile-Complete-Flutter-UI\build\app\intermediates\incremental\debug\mergeDebugResources\stripped.dir
 com.example.demo_app-merged_res-11 C:\xampp\htdocs\mobile-Complete-Flutter-UI\build\app\intermediates\merged_res\debug
+com.example.demo_app-packaged_res-12 C:\xampp\htdocs\mobile-Complete-Flutter-UI\build\fluttertoast\intermediates\packaged_res\debug

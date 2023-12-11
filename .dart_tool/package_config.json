@@ -74,6 +74,30 @@
       "languageVersion": "3.2"
     },
     {
+      "name": "flutter_web_plugins",
+      "rootUri": "file:///C:/Users/gohji/StudioProjects/flutter_application_1/flutter/packages/flutter_web_plugins",
+      "packageUri": "lib/",
+      "languageVersion": "3.2"
+    },
+    {
+      "name": "fluttertoast",
+      "rootUri": "file:///C:/Users/gohji/AppData/Local/Pub/Cache/hosted/pub.dev/fluttertoast-8.2.4",
+      "packageUri": "lib/",
+      "languageVersion": "2.12"
+    },
+    {
+      "name": "http",
+      "rootUri": "file:///C:/Users/gohji/AppData/Local/Pub/Cache/hosted/pub.dev/http-1.1.2",
+      "packageUri": "lib/",
+      "languageVersion": "3.2"
+    },
+    {
+      "name": "http_parser",
+      "rootUri": "file:///C:/Users/gohji/AppData/Local/Pub/Cache/hosted/pub.dev/http_parser-4.0.2",
+      "packageUri": "lib/",
+      "languageVersion": "2.12"
+    },
+    {
       "name": "lints",
       "rootUri": "file:///C:/Users/gohji/AppData/Local/Pub/Cache/hosted/pub.dev/lints-2.1.1",
       "packageUri": "lib/",
@@ -170,6 +194,12 @@
       "languageVersion": "3.0"
     },
     {
+      "name": "typed_data",
+      "rootUri": "file:///C:/Users/gohji/AppData/Local/Pub/Cache/hosted/pub.dev/typed_data-1.3.2",
+      "packageUri": "lib/",
+      "languageVersion": "2.17"
+    },
+    {
       "name": "vector_graphics",
       "rootUri": "file:///C:/Users/gohji/AppData/Local/Pub/Cache/hosted/pub.dev/vector_graphics-1.1.9+1",
       "packageUri": "lib/",
@@ -212,7 +242,7 @@
       "languageVersion": "3.1"
     }
   ],
-  "generated": "2023-12-11T03:42:49.197496Z",
+  "generated": "2023-12-11T04:23:16.431465Z",
   "generator": "pub",
   "generatorVersion": "3.2.2"
 }
