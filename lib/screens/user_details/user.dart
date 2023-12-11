@@ -55,7 +55,7 @@ class _UserScreenState extends State<UserScreen> {
 
   Future<void> fetchUsers() async {
     final response = await http.get(
-        Uri.parse('http://10.0.2.2/api_connection/get_users.php'));
+        Uri.parse('http://10.0.2.2/mobile-Complete-Flutter-UI/api_connection/get_users.php'));
 
     if (response.statusCode == 200) {
       List<dynamic> data = json.decode(response.body);
@@ -88,7 +88,7 @@ class _UserScreenState extends State<UserScreen> {
 
   Future<void> deleteUser(String userId) async {
     final response = await http.post(
-      Uri.parse('http://10.0.2.2/api_connection/delete_user.php'),
+      Uri.parse('http://10.0.2.2/mobile-Complete-Flutter-UI/api_connection/delete_user.php'),
       body: {'user_id': userId},
     );
 
@@ -126,7 +126,7 @@ class _UserScreenState extends State<UserScreen> {
     String dpId,
   ) async {
     final response = await http.post(
-      Uri.parse('http://10.0.2.2/api_connection/update_user.php'),
+      Uri.parse('http://10.0.2.2/mobile-Complete-Flutter-UI/api_connection/update_user.php'),
       body: {
         'user_id': userId,
         'user_name': userName,

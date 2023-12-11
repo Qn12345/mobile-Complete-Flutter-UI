@@ -16,7 +16,7 @@ class _RegisterState extends State<Register> {
   TextEditingController pass = TextEditingController();
 
   Future register() async {
-    var url = Uri.parse("http://127.0.0.1/api_connection/register.php");
+    var url = Uri.parse("http://10.0.2.2/mobile-Complete-Flutter-UI/api_connection/register.php");
     var response = await http.post(url, body: {
       "username": user.text,
       "password": pass.text,

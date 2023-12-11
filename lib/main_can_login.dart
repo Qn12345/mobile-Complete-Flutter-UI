@@ -36,7 +36,7 @@ class _MyHomePageState extends State<MyHomePage> {
   TextEditingController user_password = TextEditingController();
 
   Future login() async {
-    var url = Uri.parse("http://10.0.2.2/api_connection/login.php");
+    var url = Uri.parse("http://10.0.2.2/mobile-Complete-Flutter-UI/api_connection/login.php");
     var response = await http.post(url, body: {
       "user_id": user_id.text,
       "user_password": user_password.text,

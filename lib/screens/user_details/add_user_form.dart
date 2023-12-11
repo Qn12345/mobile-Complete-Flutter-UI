@@ -114,7 +114,7 @@ class AddUserForm extends StatelessWidget {
 
           // Send a request to your server to add the new user
           final response = await http.post(
-            Uri.parse('http://10.0.2.2/api_connection/add_user.php'),
+            Uri.parse('http://10.0.2.2/mobile-Complete-Flutter-UI/api_connection/add_user.php'),
             body: {
               'user_id': userId,
               'user_name': userName,
