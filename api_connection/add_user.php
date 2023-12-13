@@ -13,8 +13,11 @@
     $count = mysqli_num_rows($result);
 
     if ($count == 1) {
-        echo json_encode("User Email already in the system. Please check again.");
-    } else {
+        http_response_code(405);
+        echo json_encode(array('error' => 'User Email already in the system. Please check again.'));
+        //("User Email already in the system. Please check again.");
+    } 
+    else {
         $sql = "INSERT INTO user (user_id, user_name, user_password, user_guid, dp_id)
         VALUES ('$user_id', '$user_name', '$user_password', '$user_guid', '$dp_id')";
 

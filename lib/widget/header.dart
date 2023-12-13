@@ -1,13 +1,15 @@
 import 'package:flutter/material.dart';
 
 class AppHeader extends StatelessWidget implements PreferredSizeWidget {
+  const AppHeader({super.key});
+
   @override
   Size get preferredSize => const Size.fromHeight(kToolbarHeight);
 
   @override
   Widget build(BuildContext context) {
     return AppBar(
-      title: Text(
+      title: const Text(
         'Your App Name',
         /*style: TextStyle(
           color: const Color.black, // Customize text color

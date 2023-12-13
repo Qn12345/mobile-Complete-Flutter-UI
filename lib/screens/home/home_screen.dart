@@ -10,10 +10,10 @@ class HomeScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppHeader(), // Use AppHeader as the app bar
+      appBar: const AppHeader(), // Use AppHeader as the app bar
       body: SafeArea(
         child: SingleChildScrollView(
-          padding: EdgeInsets.symmetric(vertical: 16),
+          padding: const EdgeInsets.symmetric(vertical: 16),
           child: Column(
             children: [
               ElevatedButton(
@@ -22,11 +22,11 @@ class HomeScreen extends StatelessWidget {
                   Navigator.push(
                     context,
                     MaterialPageRoute(
-                      builder: (context) => UserScreen(),
+                      builder: (context) => const UserScreen(),
                     ),
                   );
                 },
-                child: Text('View Users'),
+                child: const Text('View Users'),
               ),
             ],
           ),

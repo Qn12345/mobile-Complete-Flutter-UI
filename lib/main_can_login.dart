@@ -8,10 +8,12 @@ import 'package:http/http.dart' as http;
 import 'DashBoard.dart';
 
 void main() {
-  runApp(MyApp());
+  runApp(const MyApp());
 }
 
 class MyApp extends StatelessWidget {
+  const MyApp({super.key});
+
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
@@ -21,12 +23,14 @@ class MyApp extends StatelessWidget {
         primarySwatch: Colors.blue,
         visualDensity: VisualDensity.adaptivePlatformDensity,
       ),
-      home: MyHomePage(),
+      home: const MyHomePage(),
     );
   }
 }
 
 class MyHomePage extends StatefulWidget {
+  const MyHomePage({super.key});
+
   @override
   _MyHomePageState createState() => _MyHomePageState();
 }
@@ -48,7 +52,7 @@ class _MyHomePageState extends State<MyHomePage> {
           fontSize: 25,
           textColor: Colors.green,
       );
-      Navigator.push(context, MaterialPageRoute(builder: (context)=>DashBoard(),),);
+      Navigator.push(context, MaterialPageRoute(builder: (context)=>const DashBoard(),),);
     } else {
       Fluttertoast.showToast(
           msg: 'Username and password invalid',
@@ -61,19 +65,19 @@ class _MyHomePageState extends State<MyHomePage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text(
+        title: const Text(
           'Login SignUp',
           style: TextStyle(fontWeight: FontWeight.bold),
         ),
       ),
-      body: Container(
+      body: SizedBox(
         height: 300,
         child: Card(
           color: Colors.amber,
           child: Column(
             children: <Widget>[
-              Padding(
-                padding: const EdgeInsets.all(8.0),
+              const Padding(
+                padding: EdgeInsets.all(8.0),
                 child: Text(
                   'Login',
                   style: TextStyle(fontSize: 25, fontWeight: FontWeight.bold),
@@ -84,7 +88,7 @@ class _MyHomePageState extends State<MyHomePage> {
                 child: TextField(
                   decoration: InputDecoration(
                     labelText: 'User ID',
-                    prefixIcon: Icon(Icons.person),
+                    prefixIcon: const Icon(Icons.person),
                     border: OutlineInputBorder(
                         borderRadius: BorderRadius.circular(8)),
                   ),
@@ -97,7 +101,7 @@ class _MyHomePageState extends State<MyHomePage> {
                   obscureText: true,
                   decoration: InputDecoration(
                     labelText: 'Password',
-                    prefixIcon: Icon(Icons.lock),
+                    prefixIcon: const Icon(Icons.lock),
                     border: OutlineInputBorder(
                         borderRadius: BorderRadius.circular(8)),
                   ),
@@ -109,7 +113,7 @@ class _MyHomePageState extends State<MyHomePage> {
                   Expanded(
                     child: MaterialButton(
                       color: Colors.pink,
-                      child: Text('Login',
+                      child: const Text('Login',
                           style: TextStyle(
                               fontSize: 20,
                               fontWeight: FontWeight.bold,
@@ -122,7 +126,7 @@ class _MyHomePageState extends State<MyHomePage> {
                   Expanded(
                     child: MaterialButton(
                       color: Colors.amber[100],
-                      child: Text('Register',
+                      child: const Text('Register',
                           style: TextStyle(
                               fontSize: 20,
                               fontWeight: FontWeight.bold,
@@ -131,7 +135,7 @@ class _MyHomePageState extends State<MyHomePage> {
                         Navigator.push(
                           context,
                           MaterialPageRoute(
-                            builder: (context) => Register(),
+                            builder: (context) => const Register(),
                           ),
                         );
                       },

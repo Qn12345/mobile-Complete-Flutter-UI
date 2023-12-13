@@ -10,7 +10,7 @@ import 'package:http/http.dart' as http;
 import 'dart:convert';
 
 class SignForm extends StatefulWidget {
-  const SignForm({Key? key});
+  const SignForm({super.key});
 
   @override
   _SignFormState createState() => _SignFormState();
@@ -39,13 +39,13 @@ class _SignFormState extends State<SignForm> {
   }
 
   Future<void> login() async {
-    var url = Uri.parse("http://10.0.2.2/mobile-Complete-Flutter-UI/api_connection/login.php");
+    var url = Uri.parse("http://office.panda-eco.com:18243/rest_b2b/index.php/B2b_trigger/M_login");
     var response = await http.post(url, body: {
-      "user_id": emailController.text,
-      "user_password": passwordController.text,
+      "userid": emailController.text,
+      "password": passwordController.text,
     });
     var data = json.decode(response.body);
-    if (data == "Success") {
+    if (data['status'] == 'true') {
       Fluttertoast.showToast(
         msg: 'Login Successful',
         fontSize: 25,
@@ -54,7 +54,7 @@ class _SignFormState extends State<SignForm> {
       Navigator.pushNamed(context, LoginSuccessScreen.routeName);
     } else {
       Fluttertoast.showToast(
-        msg: 'Username and password invalid',
+        msg: data['message'],
         fontSize: 25,
         textColor: Colors.red,
       );
@@ -74,19 +74,14 @@ class _SignFormState extends State<SignForm> {
             onChanged: (value) {
               if (value.isNotEmpty) {
                 removeError(error: kEmailNullError);
-              } else if (emailValidatorRegExp.hasMatch(value)) {
-                removeError(error: kInvalidEmailError);
-              }
+              } 
               return;
             },
             validator: (value) {
               if (value!.isEmpty) {
                 addError(error: kEmailNullError);
                 return "";
-              } else if (!emailValidatorRegExp.hasMatch(value)) {
-                addError(error: kInvalidEmailError);
-                return "";
-              }
+              } 
               return null;
             },
             decoration: const InputDecoration(

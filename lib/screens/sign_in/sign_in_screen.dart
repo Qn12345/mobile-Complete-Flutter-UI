@@ -12,16 +12,16 @@ class SignInScreen extends StatelessWidget {
       appBar: AppBar(
         title: const Text("Sign In"),
       ),
-      body: SafeArea(
+      body: const SafeArea(
         child: SizedBox(
           width: double.infinity,
           child: Padding(
-            padding: const EdgeInsets.symmetric(horizontal: 20),
+            padding: EdgeInsets.symmetric(horizontal: 20),
             child: SingleChildScrollView(
               child: Column(
                 children: [
-                  const SizedBox(height: 16),
-                  const Text(
+                  SizedBox(height: 16),
+                  Text(
                     "Welcome Back",
                     style: TextStyle(
                       color: Colors.black,
@@ -29,14 +29,14 @@ class SignInScreen extends StatelessWidget {
                       fontWeight: FontWeight.bold,
                     ),
                   ),
-                  const Text(
+                  Text(
                     "Sign in with your email and password",
                     textAlign: TextAlign.center,
                   ),
-                  const SizedBox(height: 16),
-                  const SignForm(),
-                  const SizedBox(height: 16),
-                  const SizedBox(height: 20),
+                  SizedBox(height: 16),
+                  SignForm(),
+                  SizedBox(height: 16),
+                  SizedBox(height: 20),
                 ],
               ),
             ),

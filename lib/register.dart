@@ -7,6 +7,8 @@ import 'DashBoard.dart';
 import 'main_can_login.dart';
 
 class Register extends StatefulWidget {
+  const Register({super.key});
+
   @override
   _RegisterState createState() => _RegisterState();
 }
@@ -33,7 +35,7 @@ class _RegisterState extends State<Register> {
           msg: 'Registration Successful',
           fontSize: 25,
           textColor: Colors.green);
-          Navigator.push(context, MaterialPageRoute(builder: (context)=>DashBoard(),),);
+          Navigator.push(context, MaterialPageRoute(builder: (context)=>const DashBoard(),),);
     }
   }
 
@@ -41,19 +43,19 @@ class _RegisterState extends State<Register> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text(
+        title: const Text(
           'Login SignUp',
           style: TextStyle(fontWeight: FontWeight.bold),
         ),
       ),
-      body: Container(
+      body: SizedBox(
         height: 300,
         child: Card(
           color: Colors.amber,
           child: Column(
             children: <Widget>[
-              Padding(
-                padding: const EdgeInsets.all(8.0),
+              const Padding(
+                padding: EdgeInsets.all(8.0),
                 child: Text(
                   'Register',
                   style: TextStyle(fontSize: 25, fontWeight: FontWeight.bold),
@@ -64,7 +66,7 @@ class _RegisterState extends State<Register> {
                 child: TextField(
                   decoration: InputDecoration(
                     labelText: 'Username',
-                    prefixIcon: Icon(Icons.person),
+                    prefixIcon: const Icon(Icons.person),
                     border: OutlineInputBorder(
                         borderRadius: BorderRadius.circular(8)),
                   ),
@@ -77,7 +79,7 @@ class _RegisterState extends State<Register> {
                   obscureText: true,
                   decoration: InputDecoration(
                     labelText: 'Password',
-                    prefixIcon: Icon(Icons.lock),
+                    prefixIcon: const Icon(Icons.lock),
                     border: OutlineInputBorder(
                         borderRadius: BorderRadius.circular(8)),
                   ),
@@ -89,7 +91,7 @@ class _RegisterState extends State<Register> {
                   Expanded(
                     child: MaterialButton(
                       color: Colors.pink,
-                      child: Text('Register',
+                      child: const Text('Register',
                           style: TextStyle(
                               fontSize: 20,
                               fontWeight: FontWeight.bold,
@@ -102,7 +104,7 @@ class _RegisterState extends State<Register> {
                   Expanded(
                     child: MaterialButton(
                       color: Colors.amber[100],
-                      child: Text('Login',
+                      child: const Text('Login',
                           style: TextStyle(
                               fontSize: 20,
                               fontWeight: FontWeight.bold,
@@ -111,7 +113,7 @@ class _RegisterState extends State<Register> {
                         Navigator.push(
                           context,
                           MaterialPageRoute(
-                            builder: (context) => MyHomePage(),
+                            builder: (context) => const MyHomePage(),
                           ),
                         );
                       },

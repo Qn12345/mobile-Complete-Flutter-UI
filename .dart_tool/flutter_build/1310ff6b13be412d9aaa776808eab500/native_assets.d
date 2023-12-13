@@ -1,0 +1,1 @@
+ C:\\xampp\\htdocs\\mobile-Complete-Flutter-UI\\.dart_tool\\flutter_build\\1310ff6b13be412d9aaa776808eab500\\native_assets.yaml: 
